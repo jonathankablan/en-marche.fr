@@ -104,6 +104,10 @@ doctrine:
             uuid:           Ramsey\Uuid\Doctrine\UuidType
             phone_number:   Misd\PhoneNumberBundle\Doctrine\DBAL\Types\PhoneNumberType
             geo_point:      AppBundle\Doctrine\DBAL\Types\GeoPointType
+            geometry:       CrEOF\Spatial\DBAL\Types\GeometryType
+            point:          CrEOF\Spatial\DBAL\Types\Geometry\PointType
+            polygon:        CrEOF\Spatial\DBAL\Types\Geometry\PolygonType
+            multipolygon:   CrEOF\Spatial\DBAL\Types\Geometry\PolygonType
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
         naming_strategy: doctrine.orm.naming_strategy.underscore
@@ -133,6 +137,10 @@ doctrine:
                 cos: DoctrineExtensions\Query\Mysql\Cos
                 radians: DoctrineExtensions\Query\Mysql\Radians
                 sin: DoctrineExtensions\Query\Mysql\Sin
+                st_contains: CrEOF\Spatial\ORM\Query\AST\Functions\MySql\STContains
+                st_geomfromtext: CrEOF\Spatial\ORM\Query\AST\Functions\MySql\GeomFromText
+                st_within: CrEOF\Spatial\ORM\Query\AST\Functions\MySql\STWithin
+                point: CrEOF\Spatial\ORM\Query\AST\Functions\MySql\Point
             string_functions:
                 json_contains: AppBundle\Query\Mysql\JsonContains
                 find_in_set: DoctrineExtensions\Query\Mysql\FindInSet

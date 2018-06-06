@@ -3,12 +3,12 @@
 namespace Tests\AppBundle\Command;
 
 use AppBundle\DataFixtures\ORM\LoadTimelineData;
-use Tests\AppBundle\SqliteWebTestCase;
+use Tests\AppBundle\MysqlWebTestCase;
 
 /**
  * @group functional
  */
-class TimelineSynchronizeCommandTest extends SqliteWebTestCase
+class TimelineSynchronizeCommandTest extends MysqlWebTestCase
 {
     public function testCommand()
     {

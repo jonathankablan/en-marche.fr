@@ -9,12 +9,12 @@ use AppBundle\DataFixtures\ORM\LoadLegislativesData;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Tests\AppBundle\Controller\ControllerTestTrait;
-use Tests\AppBundle\SqliteWebTestCase;
+use Tests\AppBundle\MysqlWebTestCase;
 
 /**
  * @group functional
  */
-class MapsControllerTest extends SqliteWebTestCase
+class MapsControllerTest extends MysqlWebTestCase
 {
     use ControllerTestTrait;
 

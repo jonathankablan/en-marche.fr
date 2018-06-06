@@ -10,13 +10,13 @@ use AppBundle\DataFixtures\ORM\LoadUserData;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Tests\AppBundle\Controller\ControllerTestTrait;
-use Tests\AppBundle\SqliteWebTestCase;
+use Tests\AppBundle\MysqlWebTestCase;
 
 /**
  * @group functional
  * @group map
  */
-class MapControllerTest extends SqliteWebTestCase
+class MapControllerTest extends MysqlWebTestCase
 {
     use ControllerTestTrait;
 

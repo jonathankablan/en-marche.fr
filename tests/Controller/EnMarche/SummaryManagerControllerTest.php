@@ -20,13 +20,13 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Tests\AppBundle\Controller\ControllerTestTrait;
-use Tests\AppBundle\SqliteWebTestCase;
+use Tests\AppBundle\MysqlWebTestCase;
 
 /**
  * @group functional
  * @group summary
  */
-class SummaryManagerControllerTest extends SqliteWebTestCase
+class SummaryManagerControllerTest extends MysqlWebTestCase
 {
     use ControllerTestTrait;
 

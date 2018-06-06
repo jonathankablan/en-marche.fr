@@ -9,13 +9,13 @@ use AppBundle\Repository\EmailRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Tests\AppBundle\Controller\ControllerTestTrait;
-use Tests\AppBundle\SqliteWebTestCase;
+use Tests\AppBundle\MysqlWebTestCase;
 
 /**
  * @group functional
  * @group legislatives
  */
-class LegislativesControllerTest extends SqliteWebTestCase
+class LegislativesControllerTest extends MysqlWebTestCase
 {
     use ControllerTestTrait;
 

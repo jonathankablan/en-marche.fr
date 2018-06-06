@@ -9,13 +9,13 @@ use AppBundle\DataFixtures\ORM\LoadProposalData;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Tests\AppBundle\Controller\ControllerTestTrait;
-use Tests\AppBundle\SqliteWebTestCase;
+use Tests\AppBundle\MysqlWebTestCase;
 
 /**
  * @group functional
  * @group amp
  */
-class AmpControllerTest extends SqliteWebTestCase
+class AmpControllerTest extends MysqlWebTestCase
 {
     use ControllerTestTrait;
 

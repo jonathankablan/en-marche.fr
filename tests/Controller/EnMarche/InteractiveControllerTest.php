@@ -14,12 +14,12 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Tests\AppBundle\Controller\ControllerTestTrait;
-use Tests\AppBundle\SqliteWebTestCase;
+use Tests\AppBundle\MysqlWebTestCase;
 
 /**
  * @group functional
  */
-class InteractiveControllerTest extends SqliteWebTestCase
+class InteractiveControllerTest extends MysqlWebTestCase
 {
     use ControllerTestTrait;
 

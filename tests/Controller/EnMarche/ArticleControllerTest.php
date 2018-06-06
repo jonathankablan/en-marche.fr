@@ -8,13 +8,13 @@ use AppBundle\DataFixtures\ORM\LoadLiveLinkData;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Tests\AppBundle\Controller\ControllerTestTrait;
-use Tests\AppBundle\SqliteWebTestCase;
+use Tests\AppBundle\MysqlWebTestCase;
 
 /**
  * @group functional
  * @group article
  */
-class ArticleControllerTest extends SqliteWebTestCase
+class ArticleControllerTest extends MysqlWebTestCase
 {
     use ControllerTestTrait;
 

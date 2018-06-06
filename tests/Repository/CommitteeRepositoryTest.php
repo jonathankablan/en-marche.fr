@@ -5,12 +5,12 @@ namespace Tests\AppBundle\Repository;
 use AppBundle\DataFixtures\ORM\LoadAdherentData;
 use AppBundle\Repository\CommitteeRepository;
 use Tests\AppBundle\Controller\ControllerTestTrait;
-use Tests\AppBundle\SqliteWebTestCase;
+use Tests\AppBundle\MysqlWebTestCase;
 
 /**
  * @group functional
  */
-class CommitteeRepositoryTest extends SqliteWebTestCase
+class CommitteeRepositoryTest extends MysqlWebTestCase
 {
     /**
      * @var CommitteeRepository

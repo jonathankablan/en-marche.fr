@@ -3,12 +3,12 @@
 namespace Tests\AppBundle\Command;
 
 use AppBundle\DataFixtures\ORM\LoadAdherentData;
-use Tests\AppBundle\SqliteWebTestCase;
+use Tests\AppBundle\MysqlWebTestCase;
 
 /**
  * @group functional
  */
-class ApiScheduleCommitteeCreationCommandTest extends SqliteWebTestCase
+class ApiScheduleCommitteeCreationCommandTest extends MysqlWebTestCase
 {
     public function testCommand(): void
     {

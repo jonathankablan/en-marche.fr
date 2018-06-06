@@ -6,13 +6,13 @@ use AppBundle\Command\ImportReferentBioPictureCommand;
 use AppBundle\DataFixtures\ORM\LoadReferentData;
 use AppBundle\Entity\Media;
 use AppBundle\Entity\Referent;
-use Tests\AppBundle\SqliteWebTestCase;
+use Tests\AppBundle\MysqlWebTestCase;
 use Tests\AppBundle\TestHelperTrait;
 
 /**
  * @group functional
  */
-class ImportReferentBioPictureCommandTest extends SqliteWebTestCase
+class ImportReferentBioPictureCommandTest extends MysqlWebTestCase
 {
     use TestHelperTrait;
     const VALID_ARCHIVE_NAME = 'correct.zip';

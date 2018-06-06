@@ -7,12 +7,12 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Tests\AppBundle\Controller\ApiControllerTestTrait;
 use Tests\AppBundle\Controller\ControllerTestTrait;
-use Tests\AppBundle\SqliteWebTestCase;
+use Tests\AppBundle\MysqlWebTestCase;
 
 /**
  * @group functional
  */
-class CommitteesControllerTest extends SqliteWebTestCase
+class CommitteesControllerTest extends MysqlWebTestCase
 {
     use ControllerTestTrait;
     use ApiControllerTestTrait;

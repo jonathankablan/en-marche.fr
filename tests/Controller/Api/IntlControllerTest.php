@@ -5,12 +5,12 @@ namespace Tests\AppBundle\Controller\Api;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Tests\AppBundle\Controller\ControllerTestTrait;
-use Tests\AppBundle\SqliteWebTestCase;
+use Tests\AppBundle\MysqlWebTestCase;
 
 /**
  * @group functional
  */
-class IntlControllerTest extends SqliteWebTestCase
+class IntlControllerTest extends MysqlWebTestCase
 {
     use ControllerTestTrait;
 

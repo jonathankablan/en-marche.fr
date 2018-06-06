@@ -8,13 +8,13 @@ use AppBundle\DataFixtures\ORM\LoadLiveLinkData;
 use AppBundle\DataFixtures\ORM\LoadRedirectionData;
 use Symfony\Component\HttpFoundation\Request;
 use Tests\AppBundle\Controller\ControllerTestTrait;
-use Tests\AppBundle\SqliteWebTestCase;
+use Tests\AppBundle\MysqlWebTestCase;
 
 /**
  * @group functional
  * @group home
  */
-class HomeControllerTest extends SqliteWebTestCase
+class HomeControllerTest extends MysqlWebTestCase
 {
     use ControllerTestTrait;
 

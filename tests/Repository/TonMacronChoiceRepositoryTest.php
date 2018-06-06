@@ -6,12 +6,12 @@ use AppBundle\DataFixtures\ORM\LoadTonMacronData;
 use AppBundle\Entity\TonMacronChoice;
 use AppBundle\Repository\TonMacronChoiceRepository;
 use Tests\AppBundle\Controller\ControllerTestTrait;
-use Tests\AppBundle\SqliteWebTestCase;
+use Tests\AppBundle\MysqlWebTestCase;
 
 /**
  * @group functional
  */
-class TonMacronChoiceRepositoryTest extends SqliteWebTestCase
+class TonMacronChoiceRepositoryTest extends MysqlWebTestCase
 {
     /**
      * @var TonMacronChoiceRepository

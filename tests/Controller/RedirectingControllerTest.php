@@ -5,12 +5,12 @@ namespace Tests\AppBundle\Controller;
 use AppBundle\DataFixtures\ORM\LoadArticleData;
 use AppBundle\DataFixtures\ORM\LoadPageData;
 use Symfony\Component\HttpFoundation\Request;
-use Tests\AppBundle\SqliteWebTestCase;
+use Tests\AppBundle\MysqlWebTestCase;
 
 /**
  * @group functional
  */
-class RedirectingControllerTest extends SqliteWebTestCase
+class RedirectingControllerTest extends MysqlWebTestCase
 {
     use ControllerTestTrait;
 

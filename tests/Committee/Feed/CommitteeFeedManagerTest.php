@@ -10,14 +10,14 @@ use AppBundle\Mailer\Message\CommitteeMessageNotificationMessage;
 use AppBundle\Repository\CommitteeMembershipRepository;
 use AppBundle\Repository\CommitteeRepository;
 use AppBundle\Repository\EmailRepository;
-use Tests\AppBundle\SqliteWebTestCase;
+use Tests\AppBundle\MysqlWebTestCase;
 use Tests\AppBundle\TestHelperTrait;
 
 /**
  * @group functional
  * @group committee
  */
-class CommitteeFeedManagerTest extends SqliteWebTestCase
+class CommitteeFeedManagerTest extends MysqlWebTestCase
 {
     use TestHelperTrait;
 

@@ -7,13 +7,13 @@ use AppBundle\DataFixtures\ORM\LoadPageData;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Tests\AppBundle\Controller\ControllerTestTrait;
-use Tests\AppBundle\SqliteWebTestCase;
+use Tests\AppBundle\MysqlWebTestCase;
 
 /**
  * @group functional
  * @group explainer
  */
-class ExplainerControllerTest extends SqliteWebTestCase
+class ExplainerControllerTest extends MysqlWebTestCase
 {
     use ControllerTestTrait;
 

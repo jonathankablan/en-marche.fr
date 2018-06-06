@@ -6,12 +6,12 @@ use League\Glide\Signatures\Signature;
 use League\Glide\Signatures\SignatureFactory;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Tests\AppBundle\SqliteWebTestCase;
+use Tests\AppBundle\MysqlWebTestCase;
 
 /**
  * @group functional
  */
-class AssetsControllerTest extends SqliteWebTestCase
+class AssetsControllerTest extends MysqlWebTestCase
 {
     use ControllerTestTrait;
 

@@ -13,12 +13,12 @@ use AppBundle\Repository\EmailRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Tests\AppBundle\Controller\ControllerTestTrait;
-use Tests\AppBundle\SqliteWebTestCase;
+use Tests\AppBundle\MysqlWebTestCase;
 
 /**
  * @group functional
  */
-class AdherentSecurityControllerTest extends SqliteWebTestCase
+class AdherentSecurityControllerTest extends MysqlWebTestCase
 {
     use ControllerTestTrait;
 
