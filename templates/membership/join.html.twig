@@ -11,6 +11,7 @@
 {% block open_graph_image_height 630 %}
 
 {% block stylesheets %}
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
     <style type="text/css">
         nav,
         .cc-window {
@@ -22,12 +23,19 @@
 {% block javascripts %}
     {% import 'javascript.js.twig' as js %}
     <script type="text/javascript">
-        Kernel.onLoad(function() {
-            App.runJoin('{{ form.vars.form_type_class|e('js') }}');
-            {{ js.address(form.address) }}
-        });
+        function initAutocomplete() {
+            autocomplete = new google.maps.places.Autocomplete(
+                /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+                {types: ['geocode']});
+            Kernel.onLoad(function() {
+                App.runJoin('{{ form.vars.form_type_class|e('js') }}', autocomplete);
+                {{ js.address(form.address) }}
+            });
+        }
     </script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ google_maps_api_key }}&amp;libraries=places&amp;callback=initAutocomplete"
+            async defer></script>
 {% endblock %}
 
 {% block content %}
@@ -86,6 +94,9 @@
                                 </div>
                             {% endif %}
                             <p class="b__nudge--bottom-tiny text--bold">Adresse</p>
+
+                            <input id="autocomplete" placeholder="Enrez votre adresse" type="text"/>
+
                             <div class="l__row--h-stretch register__form--full">
                                 {{ form_widget(form.address.address, { attr: { placeholder: 'Adresse postale' } }) }}
                                 {{ form_errors(form.address.address) }}

@@ -132,9 +132,9 @@ class App {
         });
     }
 
-    runJoin(formType) {
+    runJoin(formType, autocomplete) {
         System.import('pages/join').catch((error) => { throw error; }).then((module) => {
-            module.default(formType);
+            module.default(formType, autocomplete);
         });
     }
 
