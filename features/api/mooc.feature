@@ -64,7 +64,7 @@ Feature:
           "content":"<p>une description</p>",
           "links":[],
           "attachments":[],
-          "typeformEmbed":"<p>le quizz</p>"
+          "typeformEmbed":"https://developerplatform.typeform.com/to/Xc7NMh"
         },
         {
           "type":"chapter",
