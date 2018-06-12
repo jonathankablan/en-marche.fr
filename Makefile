@@ -106,6 +106,9 @@ assets-prod: node_modules                                                       
 assets-amp: node_modules                                                                               ## Build the production version of the AMP CSS
 	$(EXEC) yarn build-amp
 
+assets-react: node_modules                                                                               ## Build the production version of the AMP CSS
+	$(EXEC) npm --prefix react install
+	$(EXEC) npm --prefix react build
 
 ##
 ## Tests

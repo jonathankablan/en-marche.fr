@@ -50,6 +50,14 @@ jobs:
 
             - *generate_docker_hashes
             - *authenticate_on_registry
+            - run:
+                name: "[env] setup .env"
+                command: |
+                  if [[ "${CIRCLE_BRANCH}" == "dashboard-referent" ]]; then
+                      env | sed -n 's/^DEMO_//p' > react/.env
+                  elif grep -q "v[0-9]\+\.[0-9]\+\.[0-9]\+" <<< "$CIRCLE_TAG"; then
+                      env | sed -n 's/^PROD_//p' > react/.env
+                  fi
             - run: |
                 set -x
 
@@ -159,6 +167,7 @@ jobs:
             - setup_remote_docker
             - run: |
                 bash scripts/build.sh
+                bash scripts/build-react.sh
 
 workflows:
     version: 2
@@ -184,7 +193,7 @@ workflows:
                 filters:
                     branches:
                         only:
-                            - master
+                            - dashboard-referent
 
     prod_deploy:
         jobs:
